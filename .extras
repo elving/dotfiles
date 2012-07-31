@@ -1,5 +1,5 @@
 # PATH additions
-export PATH="/usr/local/bin:/usr/bin:$PATH"
+export PATH="/usr/local/bin:/usr/bin:$PATH:/usr/local/sbin"
 
 # Git credentials
 # Not in the repository, to prevent people from accidentally committing under my name
