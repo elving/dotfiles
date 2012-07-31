@@ -39,7 +39,7 @@ alias sudo='sudo '
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade'
 
 # Update Nodejs
-alias updateNode='brew upgrade node; curl http://npmjs.org/install.sh | sh'
+alias updateNode='brew update; brew upgrade node; curl http://npmjs.org/install.sh | sh'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
