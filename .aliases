@@ -6,14 +6,15 @@ alias -- -="cd -"
 
 # Shortcuts
 alias d="cd ~/Dropbox"
-alias p="cd ~/Dropbox/Projects"
-alias b="cd ~/Dropbox/Blimp"
+alias b="cd ~/Dev/lift"
 alias g="git"
 alias v="vim"
 alias m="mate ."
 alias s="subl ."
 alias o="open"
 alias oo="open ."
+alias dev="cd ~/Dev"
+alias blimp="b && workon blimp && foreman start -f Procfile.dev.all && s"
 
 # List all files colorized in long format
 alias l="ls -Gl"
@@ -109,3 +110,6 @@ alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
 # Open iOS simulator
 alias ios="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
+
+# Colorize Stuff
+alias colorize="pygmentize -O style=monokai -f console256 -g"
