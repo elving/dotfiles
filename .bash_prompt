@@ -58,4 +58,9 @@ function set_virtualenv() {
   fi
 }
 
-PS1="\[${txtgrn}\]\u $(set_virtualenv)\[${bldblu}\]at \[${txtylw}\]\h \[${bldblu}\]in \[${bldred}\]\w\[${bldblu}\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[${txtpur}\]\$(parse_git_branch)\[${bldblu}\]\n\$ \[${txtrst}\]"
+function set_bash_prompt() {
+  PS1="\[${txtgrn}\]\u $(set_virtualenv)\[${bldblu}\]at \[${txtylw}\]\h \[${bldblu}\]in \[${bldred}\]\w\[${bldblu}\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[${txtpur}\]\$(parse_git_branch)\[${bldblu}\]\n\$ \[${txtrst}\]"
+}
+
+# Tell bash to execute this function just before displaying its prompt.
+PROMPT_COMMAND=set_bash_prompt
