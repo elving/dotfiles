@@ -50,4 +50,12 @@ function parse_git_branch() {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
 
-PS1="\[${txtgrn}\]\u \[${bldblu}\]at \[${txtylw}\]\h \[${bldblu}\]in \[${bldred}\]\w\[${bldblu}\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[${txtpur}\]\$(parse_git_branch)\[${bldblu}\]\n\$ \[${txtrst}\]"
+function set_virtualenv() {
+  if test -z "$VIRTUAL_ENV" ; then
+      echo ""
+  else
+      echo "\[${bldblu}\]working on \[${txtylw}\]{`basename \"$VIRTUAL_ENV\"`} "
+  fi
+}
+
+PS1="\[${txtgrn}\]\u $(set_virtualenv)\[${bldblu}\]at \[${txtylw}\]\h \[${bldblu}\]in \[${bldred}\]\w\[${bldblu}\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[${txtpur}\]\$(parse_git_branch)\[${bldblu}\]\n\$ \[${txtrst}\]"
