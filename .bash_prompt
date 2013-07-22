@@ -43,7 +43,7 @@ bakwht='\e[47m'   # White
 txtrst='\e[0m'    # Text Reset
 
 function parse_git_dirty() {
-	[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+	[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "[unstaged changes]"
 }
 
 function parse_git_branch() {
