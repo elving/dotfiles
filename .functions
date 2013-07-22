@@ -91,3 +91,10 @@ EOS
 
     fi
 }
+
+function newBranch() {
+    git branch "$@"
+    git push origin "$@"
+    git checkout "$@"
+    echo # newline
+}
