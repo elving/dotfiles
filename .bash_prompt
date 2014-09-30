@@ -54,12 +54,12 @@ function set_virtualenv() {
   if test -z "$VIRTUAL_ENV" ; then
       echo ""
   else
-      echo "\[${bldblu}\]working on \[${txtylw}\]{`basename \"$VIRTUAL_ENV\"`} "
+      echo "\[${bldblu}\]working on \[${txtcyn}\]{`basename \"$VIRTUAL_ENV\"`} "
   fi
 }
 
 function set_bash_prompt() {
-  PS1="\[${txtgrn}\]\u $(set_virtualenv)\[${bldblu}\]at \[${txtylw}\]\h \[${bldblu}\]in \[${bldred}\]\w\[${bldblu}\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[${txtpur}\]\$(parse_git_branch)\[${bldblu}\]\n\$ \[${txtrst}\]"
+  PS1="\[${txtgrn}\]\u $(set_virtualenv)\[${bldblu}\]@ \[${txtylw}\]\h \[${bldblu}\]in \[${bldred}\]\w\[${bldblu}\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[${txtpur}\]\$(parse_git_branch)\[${bldblu}\]\n\$ \[${txtrst}\]"
 }
 
 # Tell bash to execute this function just before displaying its prompt.
