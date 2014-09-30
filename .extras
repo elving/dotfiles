@@ -1,5 +1,5 @@
 # PATH additions
-export PATH="/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 
 # Git credentials
 # Not in the repository, to prevent people from accidentally committing under my name
