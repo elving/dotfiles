@@ -13,6 +13,7 @@ alias m="mate ."
 alias s="subl ."
 alias o="open"
 alias oo="open ."
+alias js="node"
 alias dev="cd ~/Dev"
 alias blimp="b && workon blimp && foreman start -f Procfile.dev.all && s"
 
